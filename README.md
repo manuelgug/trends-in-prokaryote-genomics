@@ -15,7 +15,7 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
     install.packages(c("stringr,ggplot2,tidyr,tidyverse,data.table"))
 
 ## Steps
-* Data gathering from the [ncbi ftp repository](ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/prokaryotes.txt)
+* Data gathering from the ncbi ftp repository (ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/prokaryotes.txt)
 
 * Data formatting: leave only genera and years
 
