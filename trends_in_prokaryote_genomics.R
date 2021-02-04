@@ -1,6 +1,4 @@
 
-install.packages(c("stringr,ggplot2,tidyr,tidyverse,data.table"))
-
 library(stringr)
 library(ggplot2)
 library(tidyr)
@@ -61,13 +59,13 @@ anos<-unique(df$year)
 #First argument is a string with names of genera separated by "|". Regular expresions can be used
 #Second argument is an integer to indicate color jumps for better visualization
 
-genomic_trends<-function(GENEROS,color_jumps){
+genomic_trends<-function(GENERA,color_jumps){
   #subset data
-  df_sub<-df[grep(GENEROS,df$variable),]
+  df_sub<-df[grep(GENERA,df$variable),]
   #plot
   ggplot(df_sub, aes(x = year, y = value)) + 
     geom_line(aes(colour = variable, group = variable), lwd=2)+
-    labs(fill = "Genera", x = "Year", y = "Genomes uploaded to NCBI", color = "Genera")+
+    labs(fill = "Genera", x = "Year", y = "Genome sequencing projects submitted to NCBI", color = "Genera")+
     theme(axis.text.x = element_text(angle = 45, vjust = 0.5))+
     scale_x_continuous("Year", labels = as.character(anos), breaks = anos)+
     scale_color_manual(values = c(colorRamps::primary.colors(length(unique(df_sub$variable)),color_jumps, T)))+
@@ -78,16 +76,16 @@ genomic_trends<-function(GENEROS,color_jumps){
 #Examples----
 
 #important human pathogens
-genomic_trends("Pseudomonas|Vibrio|Escherichia|Campylobacter|Salmonella|Brucella", 2)
+genomic_trends("Pseudomonas|Vibrio|Escherichia|Campylobacter|Salmonella|Brucella", 3)
+
+#some archaea
+genomic_trends("Methanosarcina|Ignicoccus|Pyrococcus|Sulfolobus", 2)
 
 #environmental bacteria
 genomic_trends("Shewanella|Aeromonas|Halomonas|Streptomyces",5)
 
 #uncultured prokaryotes vs Escherichia
 genomic_trends("uncultured|Escherichia", 4)
-
-#some archaea
-genomic_trends("Methanosarcina|Ignicoccus|Pyrococcus|Sulfolobus", 2)
 
 #halo-something prokaryotes
 genomic_trends("Halo*", 4)
