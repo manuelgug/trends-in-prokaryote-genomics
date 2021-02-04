@@ -34,3 +34,7 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
     genomic_trends("Methanosarcina|Ignicoccus|Pyrococcus|Sulfolobus", 2)
 
 ![alt text](https://github.com/manuelgug/trends-in-prokaryote-genomics/blob/main/example_outputs/some_archaea.png?raw=true)
+
+
+# Credits
+Manuel García-Ulloa (https://github.com/manuelgug)
