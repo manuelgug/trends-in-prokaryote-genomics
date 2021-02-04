@@ -15,7 +15,7 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
     install.packages(c("stringr,ggplot2,tidyr,tidyverse,data.table"))
 
 ## Steps
-* Data gathering from the ncbi repository <ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/prokaryotes.txt>
+* Data gathering from the [ncbi ftp repository](ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/prokaryotes.txt)
 
 * Data formatting: leave only genera and years
 
@@ -24,7 +24,13 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
 ## Example outputs
 
 ### Human pathogens
+
     genomic_trends("Escherichia|Pseudomonas|Vibrio|Campylobacter|Salmonella|Brucella", 3)
+    
+![alt text](https://github.com/manuelgug/trends-in-prokaryote-genomics/blob/main/example_outputs/human_pathogens.png?raw=true)
 
 ### Some archaea
+
     genomic_trends("Methanosarcina|Ignicoccus|Pyrococcus|Sulfolobus", 2)
+
+![alt text](https://github.com/manuelgug/trends-in-prokaryote-genomics/blob/main/example_outputs/some_archaea.png?raw=true)
