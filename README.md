@@ -10,7 +10,7 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
 * _tidyverse_
 * _data.table_
 
-### Installing dependencies 
+#### Installing dependencies 
 
     install.packages(c("stringr,ggplot2,tidyr,tidyverse,data.table"))
 
@@ -23,13 +23,13 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
 
 ## Example outputs
 
-### Human pathogens
+#### Human pathogens
 
     genomic_trends("Escherichia|Pseudomonas|Vibrio|Campylobacter|Salmonella|Brucella", 3)
     
 ![alt text](https://github.com/manuelgug/trends-in-prokaryote-genomics/blob/main/example_outputs/human_pathogens.png?raw=true)
 
-### Some archaea
+#### Some archaea
 
     genomic_trends("Methanosarcina|Ignicoccus|Pyrococcus|Sulfolobus", 2)
 
