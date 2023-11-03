@@ -37,4 +37,5 @@ R script for identifying trends in bacterial and archaeal genomics through numbe
 
 
 # Credits
-Manuel García-Ulloa (https://github.com/manuelgug)
+Manuel García-Ulloa (https://github.com/manuelgug)  
+Mariette Viladomat Jasso (https://github.com/MarietteViladomat)
